@@ -1,7 +1,6 @@
 from flask import Flask,redirect,render_template,request,url_for,flash,session
 import sqlite3
 from functools import wraps
-from flask_login import current_user
 import datetime
 
 
