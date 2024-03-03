@@ -45,43 +45,7 @@ app.secret_key = 'your_secret_key'
 
 
 
-posts = [
-    {
-        'id':1,
-        'author': 'John Doe',
-        'title': 'Introduction to Python Programming',
-        'content': 'Python is a high-level programming language...',
-        'date_posted': '2024-02-26'
-    },
-    {
-        'id':2,
-        'author': 'Jane Smith',
-        'title': 'Machine Learning Basics',
-        'content': 'Machine learning is a subset of artificial intelligence...',
-        'date_posted': '2024-02-25'
-    },
-    {
-        'id':3,
-        'author': 'Alex Johnson',
-        'title': 'Web Development with Flask',
-        'content': 'Flask is a lightweight WSGI web application framework...',
-        'date_posted': '2024-02-24'
-    },
-    {
-        'id':4,
-        'author': 'Emily Brown',
-        'title': 'Data Analysis with Pandas',
-        'content': 'Pandas is an open-source data analysis and manipulation library...',
-        'date_posted': '2024-02-23'
-    },
-    {
-        'id':5,
-        'author': 'Michael Lee',
-        'title': 'Introduction to Natural Language Processing',
-        'content': 'Natural Language Processing (NLP) is a field of artificial intelligence...',
-        'date_posted': '2024-02-22'
-    }
-]
+
 
 
 
