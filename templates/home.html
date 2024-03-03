@@ -16,7 +16,7 @@
           
         </div>
         <div class="col-md-6">
-          <img  src="https://cdni.iconscout.com/illustration/premium/thumb/blog-writer-working-on-article-5691583-4759515.png" width="500px" height="500px">
+          <img  src="https://cdni.iconscout.com/illustration/premium/thumb/blog-writer-working-on-article-5691583-4759515.png" width="auto" height="auto">
 
         </div>
       </div>
@@ -31,9 +31,9 @@
     <div class="card p-3 mb-4" style="width: 100%;background-color:#212529;color:rgb(255, 255, 255);border-radius: 15px 50px;">
         <div class="card-body">
           
-          <h2 class="card-title mb-4 ">{{post[2]}}</h2>
+          <h3 class=" mb-4 ">{{post[2]}}</h2>
           <!-- <p class="lead">{{post[3]}}</p> -->
-          <h4 class="card-subtitle mb-4">posted by {{post[1]}} on {{post[4]}}</h4>
+          <p class=" mb-4">posted by {{post[1]}} on {{post[4]}}</p>
           <a href="{{ url_for('detail',id = post[0])  }}" class="btn btn-light text-center mb-2">Read more</a>
           {%if username == post[1] %}
           <a href="{{ url_for('edit',id = post[0])  }}" class="btn btn-light text-center mb-2 ">Edit</a>
@@ -45,20 +45,7 @@
       {% endfor %}
    
     </div>
-    
-    <!-- <div class="col-md-4">
-        <div class="card" style="width: 100%;background-color:#212529;color:white; border:3pt solid yellow;border-radius:15px">
-            <div class="card-body mb-2">
-              <h5 class="card-title mb-4">Our sidebar</h5>
-              <h6 class="card-subtitle mb-4 ">You can put any information here you'd like</h6>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Latest post</li>
-                <li class="list-group-item">Announcement</li>
-                <li class="list-group-item">Calendar</li>
-                <li class="list-group-item">etc...</li>
-              </ul>
-            </div>
-          </div> -->
+
     
     </div>
     </div>
