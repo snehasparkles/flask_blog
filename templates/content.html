@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flash">
+            {% for message in messages %}
+                <h3>{{ message }}</h3>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+<div class="container mt-5">
+  <div id="boderlogin">
+  <h1 class="text-center">Create your Blog</h1>
+<form action="#" method ="POST">
+  <div class="mb-3">
+    <label for="blogtitle" class="form-label">Title</label>
+    <input type="text" class="form-control" name="blogtitle" required>
+  </div>
+  <div class="mb-3">
+    <label for="blogcontent" class="form-label">Write your blog here...</label>
+    <textarea class="form-control" name="blogcontent" rows="5" required></textarea>
+  </div>
+  <div class="text-center ">
+    <button type="submit" class="btn btn-light mt-4">Add</button>
+</div>
+  
+</form>
+</div>
+</div>
+{% endblock content %}
+
+<!-- {{ url_for('content')}} -->

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <section class="mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center" id="centered">
+          
+            {% if username %}
+            <h1>hey {{ username }}!</h1>
+            {% else %}
+            {% endif %}
+            <p class="h5 text-center mb-3">Publish your passions,your way</p>
+            <p class="h5 text-center mb-3">Create a unique and beautiful blog.It's easy and free</p>
+            <a href="{{ url_for('content')}}" class="btn btn-dark text-center">Create Your Blog</a>
+          
+        </div>
+        <div class="col-md-6">
+          <img  src="https://cdni.iconscout.com/illustration/premium/thumb/blog-writer-working-on-article-5691583-4759515.png" width="500px" height="500px">
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <div class="container">
+    <h2 class="text-center mb-5">Our Blogs</h2>
+    <div class="row ">
+        <div class="col-md-12 ">
+            {% for post in posts%}
+    <div class="card p-3 mb-4" style="width: 100%;background-color:#212529;color:rgb(255, 255, 255);border-radius: 15px 50px;">
+        <div class="card-body">
+          
+          <h2 class="card-title mb-4 ">{{post[2]}}</h2>
+          <!-- <p class="lead">{{post[3]}}</p> -->
+          <h4 class="card-subtitle mb-4">posted by {{post[1]}} on {{post[4]}}</h4>
+          <a href="{{ url_for('detail',id = post[0])  }}" class="btn btn-light text-center mb-2">Read more</a>
+          {%if username == post[1] %}
+          <a href="{{ url_for('edit',id = post[0])  }}" class="btn btn-light text-center mb-2 ">Edit</a>
+          <a href="{{ url_for('delete',id = post[0])  }}" class="btn btn-light text-center mb-2">Delete</a>
+          {% else %}
+          {%endif%}
+        </div>
+      </div>
+      {% endfor %}
+   
+    </div>
+    
+    <!-- <div class="col-md-4">
+        <div class="card" style="width: 100%;background-color:#212529;color:white; border:3pt solid yellow;border-radius:15px">
+            <div class="card-body mb-2">
+              <h5 class="card-title mb-4">Our sidebar</h5>
+              <h6 class="card-subtitle mb-4 ">You can put any information here you'd like</h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Latest post</li>
+                <li class="list-group-item">Announcement</li>
+                <li class="list-group-item">Calendar</li>
+                <li class="list-group-item">etc...</li>
+              </ul>
+            </div>
+          </div> -->
+    
+    </div>
+    </div>
+    </div>
+{% endblock content%}
+
